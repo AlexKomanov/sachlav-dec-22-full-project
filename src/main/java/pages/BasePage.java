@@ -28,10 +28,8 @@ public class BasePage {
     }
 
     public void clickElement(WebElement element) {
-        System.out.println("Trying to click element" + element);
         webDriverWait.until(ExpectedConditions.elementToBeClickable(element));
         element.click();
-        System.out.println("Successful click on element" + element);
     }
 
     public String getElementText(WebElement element) {
