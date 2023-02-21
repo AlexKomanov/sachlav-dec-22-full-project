@@ -33,7 +33,12 @@ public class BasePage {
     }
 
     public String getElementText(WebElement element) {
+        webDriverWait.until(ExpectedConditions.visibilityOf(element));
         return element.getText();
+    }
+
+    public String getPageUrl() {
+        return driver.getCurrentUrl();
     }
 
     public void sleep(int timeout) {
