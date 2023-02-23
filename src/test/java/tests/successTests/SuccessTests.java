@@ -19,7 +19,7 @@ public class SuccessTests extends BaseTest {
         LoginPage loginPage = new LoginPage(driver);
         ProductsPage productsPage = new ProductsPage(driver);
         loginPage.login(username, password);
-        Assert.assertEquals(productsPage.getPageTitle(), "PRODUCTS");
+        productsPage.validatePageTitle("PRODUCTS");
         Assert.assertEquals(productsPage.getPageUrl(), ApplicationURL.BASE_URL + "/inventory.html");
 
     }
