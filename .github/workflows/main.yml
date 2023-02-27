@@ -15,4 +15,4 @@ jobs:
       - name: Install Chrome Browser
         uses: browser-actions/setup-chrome@v1.1.0
       
-      - run: (Get-Command C:\Program Files (x86)\Google\Chrome\Application\chrome.exe').Version.ToString()
+      - run: (Get-Command 'C:\Program Files (x86)\Google\Chrome\Application\chrome.exe').Version.ToString()
